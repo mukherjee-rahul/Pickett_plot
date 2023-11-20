@@ -6,7 +6,10 @@ from matplotlib.widgets import Button, Slider, TextBox
 class Pickett_plot():
     
     def __init__(self,x,y) -> None:
-
+        '''
+        input x as true resistivity and y as porosity
+        input can be any array or list format including pandas data series
+        '''
         self.sat_lines = []
         # print('Object created')
         # Create the figure and the line that we will manipulate
@@ -147,4 +150,5 @@ class Pickett_plot():
 if __name__=='__main__':
     data = pd.read_csv('sample_data.csv')
     print(data.columns)
+    # Plotting phit > 10% only
     Pickett_plot(data[data['PHIT']>0.1]['Rt'], data[data['PHIT']>0.1]['PHIT'])
