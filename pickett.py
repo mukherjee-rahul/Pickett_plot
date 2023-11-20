@@ -34,7 +34,7 @@ class Pickett_plot():
         valmax=1,
         valinit=0.033,valstep=0.0001#valstep=np.exp(np.linspace(np.log(0.00001),0,10000))
         )
-        self.textbox_Rwa=TextBox(self.ax_textbox_Rwa,'',initial=self.slider_Rwa.val)
+        self.textbox_Rwa=TextBox(self.ax_textbox_Rwa,' ',initial=self.slider_Rwa.val)
 
         self.slider_m = Slider(
         ax=self.ax_slider_m,
@@ -131,7 +131,7 @@ class Pickett_plot():
 
     def update(self,val):
         self.plot_saturation(Rwa=self.slider_Rwa.val,m=self.slider_m.val,a=self.slider_a.val,n=self.slider_n.val,update=1)
-        self.textbox_Rwa.set_val(self.slider_Rwa.val)
+        self.textbox_Rwa.set_val(self.slider_Rwa.val.__format__('.4f'))
     
     def text_box_submit(self,text):
         value = float(text)
