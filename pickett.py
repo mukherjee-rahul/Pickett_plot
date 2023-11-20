@@ -144,7 +144,7 @@ class Pickett_plot():
     def button_clicked(self,event):
         self.fig.canvas.draw_idle()
         print('button clicked')
-        self.fig.savefig('output_figure_different_dpi.png',dpi=300)
+        self.fig.savefig('output_figure_300_dpi.png',dpi=300)
 
 
 if __name__=='__main__':
