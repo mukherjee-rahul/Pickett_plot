@@ -9,4 +9,4 @@ Required libraries:
 - Matplotlib
 - Pandas
 - NumPy
-- ipympl
+- ipympl (required only for jupyter implementation)
